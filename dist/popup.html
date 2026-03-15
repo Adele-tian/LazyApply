@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Apply</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Lazy Apply</h1>
+      <p class="subtitle">本地资料自动填充助手（仅本地存储，不上传）</p>
+
+      <section>
+        <h2>个人资料</h2>
+        <form id="profile-form" class="profile-grid"></form>
+        <div class="custom-block">
+          <label for="custom-input">自定义字段（格式：key=value，每行一个）</label>
+          <textarea id="custom-input" rows="4" placeholder="wechat=lazy_apply\ncity_preference=上海"></textarea>
+        </div>
+        <button id="save-profile" class="primary" type="button">保存资料</button>
+      </section>
+
+      <section>
+        <h2>操作</h2>
+        <div class="actions">
+          <button id="scan-btn" type="button">1. 预览高亮</button>
+          <button id="fill-btn" class="primary" type="button">2. 确认填充</button>
+          <button id="clear-btn" type="button">清除高亮</button>
+        </div>
+        <p id="status" class="status"></p>
+      </section>
+
+      <section>
+        <h2>识别结果</h2>
+        <ul id="result-list" class="result-list"></ul>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
